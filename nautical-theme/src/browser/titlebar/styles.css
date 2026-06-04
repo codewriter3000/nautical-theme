@@ -1,0 +1,23 @@
+.nautical-titlebar {
+    -webkit-app-region: drag;
+    -webkit-user-select: none;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 8px;
+    background: var(--theia-titleBar-activeBackground);
+    color: var(--theia-titleBar-activeForeground);
+}
+
+.nautical-titlebar__controls,
+.nautical-titlebar__controls button {
+    -webkit-app-region: no-drag;
+}
+
+.nautical-titlebar__button {
+    height: 36px;
+    width: 36px;
+    background-color: transparent;
+    border: 0;
+}

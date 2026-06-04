@@ -1,0 +1,28 @@
+{
+  "name": "nautical-theme",
+  "version": "0.0.0",
+  "keywords": [
+    "theia-extension"
+  ],
+  "dependencies": {
+    "@theia/core": "1.72.1"
+  },
+  "devDependencies": {
+    "chokidar-cli": "^3.0.0",
+    "rimraf": "^5.0.0",
+    "typescript": "~5.4.5"
+  },
+  "scripts": {
+    "dev": "chokidar \"src/browser/**/*.{ts,tsx,css,svg}\" -c \"npm run build\" --verbose --initial",
+    "prepare": "npm run clean && npm run build",
+    "clean": "rimraf lib",
+    "build": "tsc && cp -r src/browser/. lib/browser/",
+    "watch": "tsc -w"
+  },
+  "theiaExtensions": [
+    {
+      "frontend": "lib/browser/nautical-theme-frontend-module",
+      "electronMain": "lib/electron-main/nautical-electron-main-module"
+    }
+  ]
+}
