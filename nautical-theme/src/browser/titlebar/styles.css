@@ -1,23 +1,314 @@
+html,
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont,
+               "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.nautical-titlebar,
+.nautical-titlebar button,
+.nautical-ribbon__tab,
+.nautical-ribbon__button {
+  font-family: inherit;
+}
+
 .nautical-titlebar {
     -webkit-app-region: drag;
     -webkit-user-select: none;
-    height: 32px;
     display: flex;
-    align-items: center;
+    flex-direction: column;
     justify-content: space-between;
     padding: 0 8px;
     background: var(--theia-titleBar-activeBackground);
     color: var(--theia-titleBar-activeForeground);
 }
 
-.nautical-titlebar__controls,
-.nautical-titlebar__controls button {
+.nautical-titlebar__topbar {
+    display: flex;
+    align-items: center;          /* vertically center title + buttons */
+    justify-content: space-between; /* title on left, buttons on right */
+    height: 36px;                 /* standard titlebar row height */
+    -webkit-app-region: drag;
+}
+
+.nautical-titlebar__title {
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.nautical-titlebar__controls {
+    display: flex;
+    align-items: center;
+    gap: 0;
     -webkit-app-region: no-drag;
 }
 
 .nautical-titlebar__button {
+    -webkit-app-region: no-drag;
+    background: transparent;
+    border: none;
+    color: var(--theia-titleBar-activeForeground);
+    width: 46px;
     height: 36px;
-    width: 36px;
-    background-color: transparent;
-    border: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.nautical-titlebar__button:hover {
+    background-color: color-mix(in srgb, var(--theia-titleBar-activeBackground), black 30%);
+}
+
+/* Titlebar ribbon is a column: tabs row on top, content row below */
+.nautical-titlebar__ribbon {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 0 4px;
+    -webkit-app-region: no-drag;
+}
+
+/* ── Tabs row ─────────────────────────────────────────────── */
+.nautical-ribbon__tabs {
+  display: flex;
+  align-items: stretch;
+}
+
+.nautical-ribbon__tab {
+  background-color: transparent;
+  color: white;
+  height: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border: 0;
+  cursor: pointer;
+}
+
+.nautical-ribbon__tab:hover {
+  background-color: color-mix(in srgb, var(--theia-titleBar-activeBackground), black 30%);
+}
+
+.nautical-ribbon__tab-selected,
+.nautical-ribbon__tab-selected:hover {
+  background-color: #0f62fe;
+}
+
+/* ── Tab content row ──────────────────────────────────────── */
+.nautical-ribbon__tab-container {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  gap: 0;
+  padding: 4px 8px;
+  overflow-x: clip;
+  overflow-y: visible;
+}
+
+/* ── Chunk ────────────────────────────────────────────────── */
+.nautical-ribbon__chunk {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  padding: 0 8px;
+  border-right: 1px solid #262626;
+  position: relative;
+}
+
+.nautical-ribbon__chunk:last-child {
+  border-right: none;
+}
+
+.nautical-ribbon__chunk-buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  gap: 2px;
+  flex: 1;
+}
+
+/* ── Large button wrapper + split layout ─────────────────── */
+.nautical-ribbon__action-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  position: relative; /* anchor for dropdown menu */
+}
+
+.nautical-ribbon__action-wrapper--split {
+  flex-direction: row;
+  align-items: stretch;
+}
+
+.nautical-ribbon__action-wrapper--split
+  .nautical-ribbon__action--large {
+  border-right: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 3px 0 0 3px;
+}
+
+/* ── Large button ─────────────────────────────────────────── */
+.nautical-ribbon__action--large {
+  background: transparent;
+  border: none;
+  color: inherit;
+  padding: 4px 6px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 3px;
+  min-width: 48px;
+  gap: 2px;
+}
+
+.nautical-ribbon__action--large:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.nautical-ribbon__action--large .nautical-ribbon__action-icon {
+  color: #0f62fe;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nautical-ribbon__action--large .nautical-ribbon__action-label {
+  font-size: 11px;
+  white-space: nowrap;
+  text-align: center;
+}
+
+/* ── Dropdown trigger + menu ─────────────────────────────── */
+.nautical-ribbon__dropdown-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.nautical-ribbon__action-dropdown-trigger {
+  background: transparent;
+  border: none;
+  color: rgba(255, 255, 255, 0.6);
+
+  padding: 0 8px;      /* was 0 3px */
+  min-width: 26px;     /* was 14px */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  border-radius: 0 3px 3px 0;
+}
+
+.nautical-ribbon__action-dropdown-trigger:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+  color: white;
+}
+
+.nautical-ribbon__dropdown-menu {
+  position: absolute;
+  top: 100%;
+  margin-top: 2px;
+  background-color: #161616;
+  border: 1px solid #262626;
+  border-radius: 3px;
+  min-width: 160px;
+  z-index: 50;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+  padding: 2px 0;
+}
+
+/* Default: top-left of menu at bottom-left of button */
+.nautical-ribbon__dropdown-menu--left {
+  left: 0;
+}
+
+/* Overflow case: top-right of menu at bottom-right of button */
+.nautical-ribbon__dropdown-menu--right {
+  right: 0;
+}
+
+.nautical-ribbon__dropdown-item {
+  background: transparent;
+  border: none;
+  color: white;
+  width: 100%;
+  padding: 4px 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  font-size: 11px;
+  text-align: left;
+}
+
+.nautical-ribbon__dropdown-item:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.nautical-ribbon__dropdown-item-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0f62fe;
+}
+
+.nautical-ribbon__dropdown-item-label {
+  white-space: nowrap;
+}
+
+/* ── Inline columns (unchanged logic, 3 rows max) ────────── */
+.nautical-ribbon__inline-group {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  align-self: stretch;
+}
+
+.nautical-ribbon__action--inline {
+  background: transparent;
+  border: none;
+  color: inherit;
+  padding: 2px 6px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 3px;
+  gap: 6px;
+  min-width: 110px;
+  width: 100%;
+}
+
+.nautical-ribbon__action--inline:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.nautical-ribbon__action--inline .nautical-ribbon__action-icon {
+  color: #0f62fe;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.nautical-ribbon__action--inline .nautical-ribbon__action-label {
+  font-size: 11px;
+  white-space: nowrap;
+  text-align: left;
+}
+
+.nautical-ribbon__action--inline-empty {
+  min-width: 110px;
+}
+
+/* ── Chunk footer label ───────────────────────────────────── */
+.nautical-ribbon__chunk-label {
+  margin-top: 4px;
+  padding-top: 2px;
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.7);
+  text-align: center;
+  width: 100%;
+  border-top: 1px solid #262626;
 }

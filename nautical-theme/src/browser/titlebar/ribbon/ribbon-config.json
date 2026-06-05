@@ -1,0 +1,996 @@
+[
+  {
+    "id": "file",
+    "label": "File",
+    "chunks": [
+      {
+        "id": "new",
+        "label": "New",
+        "buttons": [
+          {
+            "id": "file.newTextFile",
+            "label": "New Text File",
+            "icon": "DocumentAdd",
+            "position": "large"
+          },
+          {
+            "id": "file.newFile",
+            "label": "New File",
+            "icon": "Add",
+            "position": "inline"
+          },
+          {
+            "id": "file.newFolder",
+            "label": "New Folder",
+            "icon": "FolderAdd",
+            "position": "inline"
+          },
+          {
+            "id": "file.newWindow",
+            "label": "New Window",
+            "icon": "Launch",
+            "position": "inline"
+          }
+        ]
+      },
+      {
+        "id": "open",
+        "label": "Open",
+        "buttons": [
+          {
+            "id": "file.openFolder",
+            "label": "Open Folder",
+            "icon": "FolderOpen",
+            "position": "large"
+          },
+          {
+            "id": "file.openFile",
+            "label": "Open File",
+            "icon": "Document",
+            "position": "inline"
+          },
+          {
+            "id": "file.openWorkspaceFromFile",
+            "label": "Open Workspace",
+            "icon": "Workspace",
+            "position": "inline"
+          },
+          {
+            "id": "file.openRecentWorkspace",
+            "label": "Recent Workspace",
+            "icon": "RecentlyViewed",
+            "position": "inline"
+          }
+        ]
+      },
+      {
+        "id": "workspace",
+        "label": "Workspace",
+        "buttons": [
+          {
+            "id": "file.addFolderToWorkspace",
+            "label": "Add Folder",
+            "icon": "FolderDetails",
+            "position": "large"
+          },
+          {
+            "id": "file.saveWorkspaceAs",
+            "label": "Save Workspace As",
+            "icon": "SaveImage",
+            "position": "dropdown-element"
+          }
+        ]
+      },
+      {
+        "id": "save",
+        "label": "Save",
+        "buttons": [
+          {
+            "id": "file.save",
+            "label": "Save",
+            "icon": "Save",
+            "position": "large"
+          },
+          {
+            "id": "file.saveAll",
+            "label": "Save All",
+            "icon": "SaveSeries",
+            "position": "dropdown-element"
+          },
+          {
+            "id": "file.saveAs",
+            "label": "Save As",
+            "icon": "SaveAs",
+            "position": "dropdown-element"
+          },
+          {
+            "id": "file.autoSave",
+            "label": "Auto Save",
+            "icon": "Renew",
+            "position": "inline"
+          }
+        ]
+      },
+      {
+        "id": "preferences",
+        "label": "Preferences",
+        "buttons": [
+          {
+            "id": "file.preferences",
+            "label": "Preferences",
+            "icon": "Settings",
+            "position": "large"
+          },
+          {
+            "id": "file.settings",
+            "label": "Settings",
+            "icon": "SettingsAdjust",
+            "position": "inline"
+          },
+          {
+            "id": "file.keyboardShortcuts",
+            "label": "Keyboard Shortcuts",
+            "icon": "Keyboard",
+            "position": "inline"
+          },
+          {
+            "id": "file.colorTheme",
+            "label": "Color Theme",
+            "icon": "ColorPalette",
+            "position": "inline"
+          },
+          {
+            "id": "file.checkForUpdates",
+            "label": "Check for Updates",
+            "icon": "UpdateNow",
+            "position": "large"
+          },
+          {
+            "id": "file.fileIconTheme",
+            "label": "File Icon Theme",
+            "icon": "Catalog",
+            "position": "dropdown-element"
+          }
+        ]
+      },
+      {
+        "id": "close",
+        "label": "Close",
+        "buttons": [
+          {
+            "id": "file.closeWindow",
+            "label": "Close Window",
+            "icon": "CloseOutline",
+            "position": "large"
+          },
+          {
+            "id": "file.closeEditor",
+            "label": "Close Editor",
+            "icon": "Close",
+            "position": "inline"
+          },
+          {
+            "id": "file.closeWorkspace",
+            "label": "Close Workspace",
+            "icon": "FolderOff",
+            "position": "inline"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "edit",
+    "label": "Edit",
+    "chunks": [
+      {
+        "id": "mistakes",
+        "label": "Mistakes",
+        "buttons": [
+          {
+            "id": "mistakes.undo",
+            "label": "Undo",
+            "icon": "Undo",
+            "position": "large"
+          },
+          {
+            "id": "mistakes.redo",
+            "label": "Redo",
+            "icon": "Redo",
+            "position": "large"
+          }
+        ]
+      },
+      {
+        "id": "clipboard",
+        "label": "Clipboard",
+        "buttons": [
+          {
+            "id": "clipboard.cut",
+            "label": "Cut",
+            "icon": "Cut",
+            "position": "large"
+          },
+          {
+            "id": "clipboard.copy",
+            "label": "Copy",
+            "icon": "CopyToClipboard",
+            "position": "large"
+          },
+          {
+            "id": "clipboard.copyPath",
+            "label": "Copy Path",
+            "position": "dropdown-element"
+          },
+          {
+            "id": "clipboard.paste",
+            "label": "Paste",
+            "icon": "Paste",
+            "position": "large"
+          }
+        ]
+      },
+      {
+        "id": "search",
+        "label": "Search",
+        "buttons": [
+          {
+            "id": "search.find",
+            "label": "Find",
+            "icon": "Search",
+            "position": "large"
+          },
+          {
+            "id": "search.replace",
+            "label": "Replace",
+            "position": "dropdown-element"
+          },
+          {
+            "id": "search.findInFiles",
+            "label": "Find in Files",
+            "position": "dropdown-element"
+          },
+          {
+            "id": "search.replaceInFiles",
+            "label": "Replace in Files",
+            "position": "dropdown-element"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "selection",
+    "label": "Selection",
+    "chunks": [
+      {
+        "id": "selection",
+        "label": "Selection",
+        "buttons": [
+          {
+            "id": "selection.selectAll",
+            "label": "Select All",
+            "icon": "CodeBlock",
+            "position": "large"
+          },
+          {
+            "id": "selection.expandSelection",
+            "label": "Expand Selection",
+            "position": "dropdown-element"
+          },
+          {
+            "id": "selection.shrinkSelection",
+            "label": "Shrink Selection",
+            "position": "dropdown-element"
+          }
+        ]
+      },
+      {
+        "id": "copymove",
+        "label": "Copy/Move",
+        "buttons": [
+          {
+            "id": "copymove.copyLineUp",
+            "label": "Copy Line Up",
+            "position": "inline"
+          },
+          {
+            "id": "copymove.copyLineDown",
+            "label": "Copy Line Down",
+            "position": "inline"
+          },
+          {
+            "id": "copymove.moveLineUp",
+            "label": "Move Line Up",
+            "position": "inline"
+          },
+          {
+            "id": "copymove.moveLineDown",
+            "label": "Move Line Down",
+            "position": "inline"
+          },
+          {
+            "id": "copymove.duplicateSelection",
+            "label": "Duplicate Selection",
+            "position": "inline"
+          }
+        ]
+      },
+      {
+        "id": "selectionadvanced",
+        "label": "Advanced",
+        "buttons": [
+          {
+            "id": "selectionadvanced.addCursorAbove",
+            "label": "Add Cursor Above",
+            "position": "inline"
+          },
+          {
+            "id": "selectionadvanced.addCursorBelow",
+            "label": "Add Cursor Below",
+            "position": "inline"
+          },
+          {
+            "id": "selectionadvanced.addCursorsToLineEnds",
+            "label": "Add Cursors to Line Ends",
+            "position": "inline"
+          },
+          {
+            "id": "selectionadvanced.addNextOccurrence",
+            "label": "Add Next Occurrence",
+            "position": "inline"
+          },
+          {
+            "id": "selectionadvanced.addPreviousOccurrence",
+            "label": "Add Previous Occurrence",
+            "position": "inline"
+          },
+          {
+            "id": "selectionadvanced.selectAllOccurrences",
+            "label": "Select All Occurrences",
+            "position": "inline"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "view",
+    "label": "View",
+    "chunks": [
+      {
+        "id": "view",
+        "label": "View",
+        "buttons": [
+          {
+            "id": "view.commandPalette",
+            "label": "Command Palette",
+            "icon": "SquareSlash",
+            "position": "large"
+          },
+          {
+            "id": "view.aiAgentHistory",
+            "label": "AI Agent History",
+            "icon": "ExecutionHistory",
+            "position": "inline"
+          },
+          {
+            "id": "view.aiChat",
+            "label": "AI Chat",
+            "icon": "IbmWatsonxAssistant",
+            "position": "inline"
+          },
+          {
+            "id": "view.aiConfiguration",
+            "label": "AI Configuration",
+            "icon": "AiLabel",
+            "position": "inline"
+          },
+          {
+            "id": "view.callHierarchy",
+            "label": "Call Hierarchy",
+            "icon": "ParentChild",
+            "position": "inline"
+          },
+          {
+            "id": "view.debug",
+            "label": "Debug",
+            "icon": "Debug",
+            "position": "inline"
+          },
+          {
+            "id": "view.debugConsole",
+            "label": "Debug Console",
+            "icon": "Terminal_3270",
+            "position": "inline"
+          },
+          {
+            "id": "view.explorer",
+            "label": "Explorer",
+            "icon": "SearchLocate",
+            "position": "inline"
+          },
+          {
+            "id": "view.extensions",
+            "label": "Extensions",
+            "icon": "Extensions",
+            "position": "inline"
+          },
+          {
+            "id": "view.transformBinary",
+            "label": "Transform Binary",
+            "icon": "TransformBinary",
+            "position": "inline"
+          },
+          {
+            "id": "view.outline",
+            "label": "Outline",
+            "icon": "BpmnConditionalOutline",
+            "position": "inline"
+          },
+          {
+            "id": "view.plugins",
+            "label": "Plugins",
+            "icon": "Plug",
+            "position": "inline"
+          },
+          {
+            "id": "view.ports",
+            "label": "Ports",
+            "icon": "PortOutput",
+            "position": "inline"
+          },
+          {
+            "id": "view.problems",
+            "label": "Problems",
+            "icon": "WarningAlt",
+            "position": "inline"
+          },
+          {
+            "id": "view.properties",
+            "label": "Properties",
+            "icon": "Thumbnail_2",
+            "position": "inline"
+          },
+          {
+            "id": "view.references",
+            "label": "References",
+            "icon": "CodeReference",
+            "position": "inline"
+          },
+          {
+            "id": "view.search",
+            "label": "Search",
+            "icon": "Search",
+            "position": "inline"
+          },
+          {
+            "id": "view.sourceControl",
+            "label": "Source Control",
+            "icon": "SourceControl",
+            "position": "inline"
+          },
+          {
+            "id": "view.typeHierarchy",
+            "label": "Type Hierarchy",
+            "icon": "ParentChild",
+            "position": "inline"
+          },
+          {
+            "id": "view.toggleToolbar",
+            "label": "Toggle Toolbar",
+            "icon": "Tools",
+            "position": "inline"
+          },
+          {
+            "id": "view.toggleWordWrap",
+            "label": "Toggle Word Wrap",
+            "icon": "TextWrap",
+            "position": "inline"
+          },
+          {
+            "id": "view.toggleMinimap",
+            "label": "Toggle Minimap",
+            "icon": "Roadmap",
+            "position": "inline"
+          },
+          {
+            "id": "view.toggleBreadcrumbs",
+            "label": "Toggle Breadcrumbs",
+            "icon": "DotMark",
+            "position": "inline"
+          },
+          {
+            "id": "view.toggleRenderWhitespace",
+            "label": "Toggle Render Whitespace",
+            "icon": "AreaRangeDashed",
+            "position": "inline"
+          },
+          {
+            "id": "view.toggleStickyScroll",
+            "label": "Toggle Sticky Scroll",
+            "icon": "WatsonHealthAutoScroll",
+            "position": "inline"
+          },
+          {
+            "id": "view.reloadWindow",
+            "label": "Reload Window",
+            "icon": "Renew",
+            "position": "inline"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "go",
+    "label": "Go",
+    "chunks": [
+      {
+        "id": "edit",
+        "label": "Edit",
+        "buttons": [
+          {
+            "id": "edit.goBack",
+            "label": "Go Back",
+            "icon": "ArrowLeft",
+            "position": "large"
+          },
+          {
+            "id": "edit.goForward",
+            "label": "Go Forward",
+            "icon": "ArrowRight",
+            "position": "large"
+          },
+          {
+            "id": "edit.lastEditLocation",
+            "label": "Last Edit Location",
+            "icon": "Rotate",
+            "position": "inline"
+          }
+        ]
+      },
+      {
+        "id": "goto",
+        "label": "Goto",
+        "buttons": [
+          {
+            "id": "goto.file",
+            "label": "Go to File",
+            "icon": "Document",
+            "position": "inline"
+          },
+          {
+            "id": "goto.symbolWorkspace",
+            "label": "Go to Symbol in Workspace",
+            "icon": "FolderDetailsReference",
+            "position": "inline"
+          },
+          {
+            "id": "goto.symbolEditor",
+            "label": "Go to Symbol in Editor",
+            "icon": "Beta",
+            "position": "inline"
+          },
+          {
+            "id": "goto.dictionary",
+            "label": "Go to Dictionary",
+            "icon": "DataDictionary",
+            "position": "inline"
+          },
+          {
+            "id": "goto.typeDefinition",
+            "label": "Go to Type Definition",
+            "icon": "WatsonHealthDicomOverlay",
+            "position": "inline"
+          },
+          {
+            "id": "goto.implementation",
+            "label": "Go to Implementation",
+            "icon": "Development",
+            "position": "inline"
+          },
+          {
+            "id": "goto.reference",
+            "label": "Go to Reference",
+            "icon": "CodeReference",
+            "position": "inline"
+          },
+          {
+            "id": "goto.lineColumn",
+            "label": "Go to Line/Column",
+            "icon": "ListNumbered",
+            "position": "inline"
+          },
+          {
+            "id": "goto.bracket",
+            "label": "Go to Bracket",
+            "icon": "ObjectIcon",
+            "position": "inline"
+          }
+        ]
+      },
+      {
+        "id": "traversing",
+        "label": "Traversing",
+        "buttons": [
+          {
+            "id": "traversing.nextProblem",
+            "label": "Next Problem",
+            "icon": "ArrowRight",
+            "position": "large"
+          },
+          {
+            "id": "traversing.previousProblem",
+            "label": "Previous Problem",
+            "icon": "ArrowLeft",
+            "position": "large"
+          },
+          {
+            "id": "traversing.nextChange",
+            "label": "Next Change",
+            "icon": "ArrowRight",
+            "position": "large"
+          },
+          {
+            "id": "traversing.previousChange",
+            "label": "Previous Change",
+            "icon": "ArrowLeft",
+            "position": "large"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "run",
+    "label": "Run",
+    "chunks": [
+      {
+        "id": "execute",
+        "label": "Execute",
+        "buttons": [
+          {
+            "id": "execute.startDebugging",
+            "label": "Start Debugging",
+            "icon": "Debug",
+            "position": "large"
+          },
+          {
+            "id": "execute.startWithoutDebugging",
+            "label": "Start Without Debugging",
+            "icon": "Play",
+            "position": "dropdown-element"
+          },
+          {
+            "id": "execute.stop",
+            "label": "Stop",
+            "icon": "Stop",
+            "position": "large"
+          },
+          {
+            "id": "execute.restart",
+            "label": "Restart",
+            "icon": "Restart",
+            "position": "large"
+          }
+        ]
+      },
+      {
+        "id": "configurations",
+        "label": "Configurations",
+        "buttons": [
+          {
+            "id": "configurations.openConfigurations",
+            "label": "Open Configurations",
+            "icon": "TableSplit",
+            "position": "large"
+          },
+          {
+            "id": "configurations.addConfigurations",
+            "label": "Add Configurations",
+            "icon": "TableAdd",
+            "position": "large"
+          }
+        ]
+      },
+      {
+        "id": "debugging",
+        "label": "Debugging",
+        "buttons": [
+          {
+            "id": "debugging.continue",
+            "label": "Continue",
+            "icon": "Continue",
+            "position": "large"
+          },
+          {
+            "id": "debugging.continueAll",
+            "label": "Continue All",
+            "position": "dropdown-element"
+          },
+          {
+            "id": "debugging.stepOver",
+            "label": "Step Over",
+            "icon": "DebugStepOver",
+            "position": "large"
+          },
+          {
+            "id": "debugging.stepInto",
+            "label": "Step Into",
+            "icon": "DebugStepInto",
+            "position": "large"
+          },
+          {
+            "id": "debugging.stepOut",
+            "label": "Step Out",
+            "icon": "DebugStepOut",
+            "position": "large"
+          },
+          {
+            "id": "debugging.pause",
+            "label": "Pause",
+            "icon": "Pause",
+            "position": "large"
+          },
+          {
+            "id": "debugging.pauseAll",
+            "label": "Pause All",
+            "position": "dropdown-element"
+          },
+          {
+            "id": "debugging.toggleBreakpoint",
+            "label": "Toggle Breakpoint",
+            "icon": "DotMark",
+            "position": "large"
+          },
+          {
+            "id": "debugging.addConditionalBreakpoint",
+            "label": "Add Conditional Breakpoint",
+            "position": "dropdown-element"
+          },
+          {
+            "id": "debugging.addInlineBreakpoint",
+            "label": "Add Inline Breakpoint",
+            "position": "dropdown-element"
+          },
+          {
+            "id": "debugging.addFunctionBreakpoint",
+            "label": "Add Function Breakpoint",
+            "position": "dropdown-element"
+          },
+          {
+            "id": "debugging.addLogpoint",
+            "label": "Add Logpoint",
+            "position": "dropdown-element"
+          },
+          {
+            "id": "debugging.enableAllBreakpoints",
+            "label": "Enable All Breakpoints",
+            "position": "dropdown-element"
+          },
+          {
+            "id": "debugging.disableAllBreakpoints",
+            "label": "Disable All Breakpoints",
+            "position": "dropdown-element"
+          },
+          {
+            "id": "debugging.removeAllBreakpoints",
+            "label": "Remove All Breakpoints",
+            "position": "dropdown-element"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "terminal",
+    "label": "Terminal",
+    "chunks": [
+      {
+        "id": "terminalmain",
+        "label": "Terminal",
+        "buttons": [
+          {
+            "id": "terminal.new",
+            "label": "New Terminal",
+            "icon": "Terminal",
+            "position": "large"
+          },
+          {
+            "id": "terminal.newWithProfile",
+            "label": "New Terminal with Profile",
+            "position": "dropdown-element"
+          },
+          {
+            "id": "terminal.toggle",
+            "label": "Toggle Terminal",
+            "icon": "Terminal_3270",
+            "position": "inline"
+          },
+          {
+            "id": "terminal.focus",
+            "label": "Focus Terminal",
+            "icon": "IbmWatsonDiscovery",
+            "position": "inline"
+          }
+        ]
+      },
+      {
+        "id": "terminallayout",
+        "label": "Layout",
+        "buttons": [
+          {
+            "id": "terminal.split",
+            "label": "Split Terminal",
+            "icon": "Split",
+            "position": "large"
+          },
+          {
+            "id": "terminal.unsplit",
+            "label": "Unsplit Terminal",
+            "position": "dropdown-element"
+          },
+          {
+            "id": "terminal.kill",
+            "label": "Kill Terminal",
+            "icon": "TrashCan",
+            "position": "large"
+          },
+          {
+            "id": "terminal.clear",
+            "label": "Clear",
+            "icon": "Clean",
+            "position": "inline"
+          }
+        ]
+      },
+      {
+        "id": "terminalrun",
+        "label": "Run",
+        "buttons": [
+          {
+            "id": "terminal.runSelectedText",
+            "label": "Run Selected Text",
+            "icon": "Play",
+            "position": "large"
+          },
+          {
+            "id": "terminal.runActiveFile",
+            "label": "Run Active File",
+            "position": "dropdown-element"
+          },
+          {
+            "id": "terminal.configureTasks",
+            "label": "Configure Tasks",
+            "icon": "Task",
+            "position": "inline"
+          },
+          {
+            "id": "terminal.openExternal",
+            "label": "Open External Terminal",
+            "icon": "Rocket",
+            "position": "inline"
+          }
+        ]
+      },
+      {
+        "id": "terminalnavigate",
+        "label": "Navigate",
+        "buttons": [
+          {
+            "id": "terminal.previous",
+            "label": "Previous Terminal",
+            "icon": "ArrowLeft",
+            "position": "large"
+          },
+          {
+            "id": "terminal.next",
+            "label": "Next Terminal",
+            "position": "dropdown-element"
+          },
+          {
+            "id": "terminal.selectDefaultProfile",
+            "label": "Select Default Profile",
+            "icon": "UserProfile",
+            "position": "inline"
+          },
+          {
+            "id": "terminal.settings",
+            "label": "Terminal Settings",
+            "icon": "Settings",
+            "position": "inline"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "help",
+    "label": "Help",
+    "chunks": [
+      {
+        "id": "helpdocs",
+        "label": "Documentation",
+        "buttons": [
+          {
+            "id": "help.documentation",
+            "label": "Documentation",
+            "icon": "Help",
+            "position": "large"
+          },
+          {
+            "id": "help.releaseNotes",
+            "label": "Release Notes",
+            "position": "dropdown-element"
+          },
+          {
+            "id": "help.getStarted",
+            "label": "Get Started",
+            "icon": "Document",
+            "position": "inline"
+          },
+          {
+            "id": "help.keyboardShortcutsReference",
+            "label": "Keyboard Shortcuts Reference",
+            "icon": "Keyboard",
+            "position": "inline"
+          }
+        ]
+      },
+      {
+        "id": "helponline",
+        "label": "Online",
+        "buttons": [
+          {
+            "id": "help.community",
+            "label": "Community Discussions",
+            "icon": "UserMultiple",
+            "position": "large"
+          },
+          {
+            "id": "help.githubRepository",
+            "label": "GitHub Repository",
+            "icon": "LogoGithub",
+            "position": "inline"
+          },
+          {
+            "id": "help.reportIssue",
+            "label": "Report Issue",
+            "icon": "BeeBat",
+            "position": "inline"
+          },
+          {
+            "id": "help.viewLicense",
+            "label": "View License",
+            "icon": "License",
+            "position": "inline"
+          }
+        ]
+      },
+      {
+        "id": "helpabout",
+        "label": "About",
+        "buttons": [
+          {
+            "id": "help.checkForUpdates",
+            "label": "Check for Updates",
+            "icon": "UpdateNow",
+            "position": "large"
+          },
+          {
+            "id": "help.about",
+            "label": "About",
+            "position": "dropdown-element"
+          },
+          {
+            "id": "help.welcome",
+            "label": "Welcome",
+            "icon": "Information",
+            "position": "inline"
+          }
+        ]
+      }
+    ]
+  }
+]
