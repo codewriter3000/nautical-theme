@@ -138,173 +138,7 @@ type CommandHandler = () => void;
 export function createRibbonCommandMap(
   commandService: CommandService
 ): Record<string, CommandHandler> {
-  return {
-    // --- New ---
-    'file.newTextFile': () => {
-      commandService.executeCommand('workbench.action.files.newUntitledFile');
-    },
-    'file.newFile': () => {
-      commandService.executeCommand('workbench.action.files.newFile');
-    },
-    'file.newFolder': () => {
-      commandService.executeCommand('explorer.newFolder');
-    },
-    'file.newWindow': () => {
-      commandService.executeCommand('workbench.action.newWindow');
-    },
-
-    // --- Open ---
-    'file.openFolder': () => {
-      commandService.executeCommand('workbench.action.files.openFolder');
-    },
-    'file.openFile': () => {
-      commandService.executeCommand('workbench.action.files.openFile');
-    },
-    'file.openWorkspaceFromFile': () => {
-      commandService.executeCommand('workbench.action.openWorkspace');
-    },
-    'file.openRecentWorkspace': () => {
-      commandService.executeCommand('workbench.action.openRecent');
-    },
-
-    // --- Workspace ---
-    'file.addFolderToWorkspace': () => {
-      commandService.executeCommand('workbench.action.addRootFolder');
-    },
-    'file.saveWorkspaceAs': () => {
-      commandService.executeCommand('workbench.action.saveWorkspaceAs');
-    },
-
-    // --- Save ---
-    'file.save': () => {
-      commandService.executeCommand('workbench.action.files.save');
-    },
-    'file.saveAll': () => {
-      commandService.executeCommand('workbench.action.files.saveAll');
-    },
-    'file.saveAs': () => {
-      commandService.executeCommand('workbench.action.files.saveAs');
-    },
-    'file.autoSave': () => {
-      commandService.executeCommand('workbench.action.toggleAutoSave');
-    },
-
-    // --- Preferences ---
-    'file.preferences': () => {
-      commandService.executeCommand('workbench.action.openSettings');
-    },
-    'file.settings': () => {
-      commandService.executeCommand('workbench.action.openWorkspaceSettings');
-    },
-    'file.keyboardShortcuts': () => {
-      commandService.executeCommand('workbench.action.openGlobalKeybindings');
-    },
-    'file.colorTheme': () => {
-      commandService.executeCommand('workbench.action.selectTheme');
-    },
-    'file.checkForUpdates': () => {
-      commandService.executeCommand('update.checkForUpdates');
-    },
-    'file.fileIconTheme': () => {
-      commandService.executeCommand('workbench.action.selectIconTheme');
-    },
-
-    // --- Close ---
-    'file.closeWindow': () => {
-      commandService.executeCommand('workbench.action.closeWindow');
-    },
-    'file.closeEditor': () => {
-      commandService.executeCommand('workbench.action.closeActiveEditor');
-    },
-    'file.closeWorkspace': () => {
-      commandService.executeCommand('workbench.action.closeFolder');
-    },
-
-    // --- Edit: Mistakes ---
-    'mistakes.undo': () => {
-      commandService.executeCommand('undo');
-    },
-    'mistakes.redo': () => {
-      commandService.executeCommand('redo');
-    },
-
-    // --- Edit: Clipboard ---
-    'clipboard.cut': () => {
-      commandService.executeCommand('editor.action.clipboardCutAction');
-    },
-    'clipboard.copy': () => {
-      commandService.executeCommand('editor.action.clipboardCopyAction');
-    },
-    'clipboard.copyPath': () => {
-      commandService.executeCommand('workbench.action.files.copyPathOfActiveFile');
-    },
-    'clipboard.paste': () => {
-      commandService.executeCommand('editor.action.clipboardPasteAction');
-    },
-
-    // --- Edit: Search ---
-    'search.find': () => {
-      commandService.executeCommand('actions.find');
-    },
-    'search.replace': () => {
-      commandService.executeCommand('editor.action.startFindReplaceAction');
-    },
-    'search.findInFiles': () => {
-      commandService.executeCommand('workbench.action.findInFiles');
-    },
-    'search.replaceInFiles': () => {
-      commandService.executeCommand('workbench.action.replaceInFiles');
-    },
-
-    // --- Selection ---
-    'selection.selectAll': () => {
-      commandService.executeCommand('editor.action.selectAll');
-    },
-    'selection.expandSelection': () => {
-      commandService.executeCommand('editor.action.smartSelect.expand');
-    },
-    'selection.shrinkSelection': () => {
-      commandService.executeCommand('editor.action.smartSelect.shrink');
-    },
-
-    // --- Selection: Copy/Move ---
-    'copymove.copyLineUp': () => {
-      commandService.executeCommand('editor.action.copyLinesUpAction');
-    },
-    'copymove.copyLineDown': () => {
-      commandService.executeCommand('editor.action.copyLinesDownAction');
-    },
-    'copymove.moveLineUp': () => {
-      commandService.executeCommand('editor.action.moveLinesUpAction');
-    },
-    'copymove.moveLineDown': () => {
-      commandService.executeCommand('editor.action.moveLinesDownAction');
-    },
-    'copymove.duplicateSelection': () => {
-      commandService.executeCommand('editor.action.duplicateSelection');
-    },
-
-    // --- Selection: Advanced ---
-    'selectionadvanced.addCursorAbove': () => {
-      commandService.executeCommand('editor.action.insertCursorAbove');
-    },
-    'selectionadvanced.addCursorBelow': () => {
-      commandService.executeCommand('editor.action.insertCursorBelow');
-    },
-    'selectionadvanced.addCursorsToLineEnds': () => {
-      commandService.executeCommand('editor.action.insertCursorAtEndOfEachLineSelected');
-    },
-    'selectionadvanced.addNextOccurrence': () => {
-      commandService.executeCommand('editor.action.addSelectionToNextFindMatch');
-    },
-    'selectionadvanced.addPreviousOccurrence': () => {
-      commandService.executeCommand('editor.action.addSelectionToPreviousFindMatch');
-    },
-    'selectionadvanced.selectAllOccurrences': () => {
-      commandService.executeCommand('editor.action.selectHighlights');
-    },
-
-    // --- View ---
+  const commandMap = {
     'view.commandPalette': () => {
       commandService.executeCommand('workbench.action.showCommands');
     },
@@ -602,6 +436,23 @@ export function createRibbonCommandMap(
       commandService.executeCommand('workbench.action.showWelcomePage');
     },
   };
+
+  return { ...Object.fromEntries(
+    ribbonConfig.flatMap(menu =>
+      menu.chunks.flatMap(chunk =>
+        chunk.buttons
+          .filter(button => typeof button.command === 'string')
+          .map(button => [
+            button.id,
+            () => {
+              commandService.executeCommand(
+                button.command!
+              );
+            }
+          ])
+      )
+    )
+  ), ...commandMap };
 }
 
 /** Split an array into chunks of fixed size, padding the last chunk with nulls */

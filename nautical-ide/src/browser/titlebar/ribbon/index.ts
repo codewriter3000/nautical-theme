@@ -4,6 +4,7 @@ export interface RibbonButton {
   caption?: string;   // small text under the group, like "New", "Open", "Save:"
   icon?: string;    // e.g. 'new-file', 'folder-open', etc. (later)
   position?: string;
+  command?: string;
   // commandId?: string;
 }
 

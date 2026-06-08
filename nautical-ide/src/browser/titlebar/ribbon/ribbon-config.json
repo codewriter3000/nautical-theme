@@ -11,25 +11,29 @@
             "id": "file.newTextFile",
             "label": "New Text File",
             "icon": "DocumentAdd",
-            "position": "large"
+            "position": "large",
+            "command": "workbench.action.files.newUntitledFile"
           },
           {
             "id": "file.newFile",
             "label": "New File",
             "icon": "Add",
-            "position": "inline"
+            "position": "inline",
+            "command": "workbench.action.files.newFile"
           },
           {
             "id": "file.newFolder",
             "label": "New Folder",
             "icon": "FolderAdd",
-            "position": "inline"
+            "position": "inline",
+            "command": "explorer.newFolder"
           },
           {
             "id": "file.newWindow",
             "label": "New Window",
             "icon": "Launch",
-            "position": "inline"
+            "position": "inline",
+            "command": "workbench.action.newWindow"
           }
         ]
       },
@@ -41,25 +45,29 @@
             "id": "file.openFolder",
             "label": "Open Folder",
             "icon": "FolderOpen",
-            "position": "large"
+            "position": "large",
+            "command": "workbench.action.files.openFolder"
           },
           {
             "id": "file.openFile",
             "label": "Open File",
             "icon": "Document",
-            "position": "inline"
+            "position": "inline",
+            "command": "workbench.action.files.openFile"
           },
           {
             "id": "file.openWorkspaceFromFile",
             "label": "Open Workspace",
             "icon": "Workspace",
-            "position": "inline"
+            "position": "inline",
+            "command": "workbench.action.openWorkspaceConfigFile"
           },
           {
             "id": "file.openRecentWorkspace",
             "label": "Recent Workspace",
             "icon": "RecentlyViewed",
-            "position": "inline"
+            "position": "inline",
+            "command": "workbench.action.openRecent"
           }
         ]
       },
@@ -71,13 +79,15 @@
             "id": "file.addFolderToWorkspace",
             "label": "Add Folder",
             "icon": "FolderDetails",
-            "position": "large"
+            "position": "large",
+            "command": "workbench.action.addRootFolder"
           },
           {
             "id": "file.saveWorkspaceAs",
             "label": "Save Workspace As",
             "icon": "SaveImage",
-            "position": "dropdown-element"
+            "position": "dropdown-element",
+            "command": "workbench.action.saveWorkspaceAs"
           }
         ]
       },
@@ -89,25 +99,29 @@
             "id": "file.save",
             "label": "Save",
             "icon": "Save",
-            "position": "large"
+            "position": "large",
+            "command": "workbench.action.files.save"
           },
           {
             "id": "file.saveAll",
             "label": "Save All",
             "icon": "SaveSeries",
-            "position": "dropdown-element"
+            "position": "dropdown-element",
+            "command": "workbench.action.files.saveAll"
           },
           {
             "id": "file.saveAs",
             "label": "Save As",
             "icon": "SaveAs",
-            "position": "dropdown-element"
+            "position": "dropdown-element",
+            "command": "workbench.action.files.saveAs"
           },
           {
             "id": "file.autoSave",
             "label": "Auto Save",
             "icon": "Renew",
-            "position": "inline"
+            "position": "inline",
+            "command": "workbench.action.toggleAutoSave"
           }
         ]
       },
@@ -119,37 +133,43 @@
             "id": "file.preferences",
             "label": "Preferences",
             "icon": "Settings",
-            "position": "large"
+            "position": "large",
+            "command": "workbench.action.openSettings"
           },
           {
             "id": "file.settings",
             "label": "Settings",
             "icon": "SettingsAdjust",
-            "position": "inline"
+            "position": "inline",
+            "command": "workbench.action.openWorkspaceSettings"
           },
           {
             "id": "file.keyboardShortcuts",
             "label": "Keyboard Shortcuts",
             "icon": "Keyboard",
-            "position": "inline"
+            "position": "inline",
+            "command": "workbench.action.openGlobalKeybindings"
           },
           {
             "id": "file.colorTheme",
             "label": "Color Theme",
             "icon": "ColorPalette",
-            "position": "inline"
+            "position": "inline",
+            "command": "workbench.action.selectTheme"
           },
           {
             "id": "file.checkForUpdates",
             "label": "Check for Updates",
             "icon": "UpdateNow",
-            "position": "large"
+            "position": "large",
+            "command": "update.checkForUpdates"
           },
           {
             "id": "file.fileIconTheme",
             "label": "File Icon Theme",
             "icon": "Catalog",
-            "position": "dropdown-element"
+            "position": "dropdown-element",
+            "command": "workbench.action.selectIconTheme"
           }
         ]
       },
@@ -161,19 +181,22 @@
             "id": "file.closeWindow",
             "label": "Close Window",
             "icon": "CloseOutline",
-            "position": "large"
+            "position": "large",
+            "command": "workbench.action.closeWindow"
           },
           {
             "id": "file.closeEditor",
             "label": "Close Editor",
             "icon": "Close",
-            "position": "inline"
+            "position": "inline",
+            "command": "workbench.action.closeActiveEditor"
           },
           {
             "id": "file.closeWorkspace",
             "label": "Close Workspace",
             "icon": "FolderOff",
-            "position": "inline"
+            "position": "inline",
+            "command": "workbench.action.closeFolder"
           }
         ]
       }
@@ -191,13 +214,15 @@
             "id": "mistakes.undo",
             "label": "Undo",
             "icon": "Undo",
-            "position": "large"
+            "position": "large",
+            "command": "core.undo"
           },
           {
             "id": "mistakes.redo",
             "label": "Redo",
             "icon": "Redo",
-            "position": "large"
+            "position": "large",
+            "command": "core.redo"
           }
         ]
       },
@@ -209,24 +234,28 @@
             "id": "clipboard.cut",
             "label": "Cut",
             "icon": "Cut",
-            "position": "large"
+            "position": "large",
+            "command": "Cut"
           },
           {
             "id": "clipboard.copy",
             "label": "Copy",
             "icon": "CopyToClipboard",
-            "position": "large"
+            "position": "large",
+            "command": "Copy"
           },
           {
             "id": "clipboard.copyPath",
             "label": "Copy Path",
-            "position": "dropdown-element"
+            "position": "dropdown-element",
+            "command": "Copy Path"
           },
           {
             "id": "clipboard.paste",
             "label": "Paste",
             "icon": "Paste",
-            "position": "large"
+            "position": "large",
+            "command": "Paste"
           }
         ]
       },
@@ -238,22 +267,26 @@
             "id": "search.find",
             "label": "Find",
             "icon": "Search",
-            "position": "large"
+            "position": "large",
+            "command": "actions.find"
           },
           {
             "id": "search.replace",
             "label": "Replace",
-            "position": "dropdown-element"
+            "position": "dropdown-element",
+            "command": "editor.action.startFindReplaceAction"
           },
           {
             "id": "search.findInFiles",
             "label": "Find in Files",
-            "position": "dropdown-element"
+            "position": "dropdown-element",
+            "command": "workbench.action.findInFiles"
           },
           {
             "id": "search.replaceInFiles",
             "label": "Replace in Files",
-            "position": "dropdown-element"
+            "position": "dropdown-element",
+            "command": "workbench.action.replaceInFiles"
           }
         ]
       }
@@ -271,17 +304,20 @@
             "id": "selection.selectAll",
             "label": "Select All",
             "icon": "CodeBlock",
-            "position": "large"
+            "position": "large",
+            "command": "editor.action.selectAll"
           },
           {
             "id": "selection.expandSelection",
             "label": "Expand Selection",
-            "position": "dropdown-element"
+            "position": "dropdown-element",
+            "command": "editor.action.smartSelect.expand"
           },
           {
             "id": "selection.shrinkSelection",
             "label": "Shrink Selection",
-            "position": "dropdown-element"
+            "position": "dropdown-element",
+            "command": "editor.action.smartSelect.shrink"
           }
         ]
       },
@@ -292,27 +328,32 @@
           {
             "id": "copymove.copyLineUp",
             "label": "Copy Line Up",
-            "position": "inline"
+            "position": "inline",
+            "command": "editor.action.copyLinesUpAction"
           },
           {
             "id": "copymove.copyLineDown",
             "label": "Copy Line Down",
-            "position": "inline"
+            "position": "inline",
+            "command": "editor.action.copyLinesDownAction"
           },
           {
             "id": "copymove.moveLineUp",
             "label": "Move Line Up",
-            "position": "inline"
+            "position": "inline",
+            "command": "editor.action.moveLinesUpAction"
           },
           {
             "id": "copymove.moveLineDown",
             "label": "Move Line Down",
-            "position": "inline"
+            "position": "inline",
+            "command": "editor.action.moveLinesDownAction"
           },
           {
             "id": "copymove.duplicateSelection",
             "label": "Duplicate Selection",
-            "position": "inline"
+            "position": "inline",
+            "command": "editor.action.duplicateSelection"
           }
         ]
       },
@@ -323,32 +364,38 @@
           {
             "id": "selectionadvanced.addCursorAbove",
             "label": "Add Cursor Above",
-            "position": "inline"
+            "position": "inline",
+            "command": "editor.action.insertCursorAbove"
           },
           {
             "id": "selectionadvanced.addCursorBelow",
             "label": "Add Cursor Below",
-            "position": "inline"
+            "position": "inline",
+            "command": "editor.action.insertCursorBelow"
           },
           {
             "id": "selectionadvanced.addCursorsToLineEnds",
             "label": "Add Cursors to Line Ends",
-            "position": "inline"
+            "position": "inline",
+            "command": "editor.action.insertCursorAtEndOfEachLineSelected"
           },
           {
             "id": "selectionadvanced.addNextOccurrence",
             "label": "Add Next Occurrence",
-            "position": "inline"
+            "position": "inline",
+            "command": "editor.action.addSelectionToNextFindMatch"
           },
           {
             "id": "selectionadvanced.addPreviousOccurrence",
             "label": "Add Previous Occurrence",
-            "position": "inline"
+            "position": "inline",
+            "command": "editor.action.addSelectionToPreviousFindMatch"
           },
           {
             "id": "selectionadvanced.selectAllOccurrences",
             "label": "Select All Occurrences",
-            "position": "inline"
+            "position": "inline",
+            "command": "editor.action.selectHighlights"
           }
         ]
       }

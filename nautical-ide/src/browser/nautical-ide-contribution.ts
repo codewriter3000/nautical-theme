@@ -1,4 +1,3 @@
-// src/browser/nautical-theme-contribution.ts (no ElectronWindowService now)
 import { injectable, inject } from '@theia/core/shared/inversify';
 import { FrontendApplicationContribution } from '@theia/core/lib/browser';
 import { CommandService } from '@theia/core';

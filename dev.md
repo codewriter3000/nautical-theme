@@ -2,7 +2,7 @@
 
 Terminal 1:
 ```
-cd nautical-theme
+cd nautical-ide
 npm run dev
 ```
 
