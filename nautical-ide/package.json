@@ -18,12 +18,12 @@
     "dev": "chokidar \"src/browser/**/*.{ts,tsx,css,svg,json}\" -c \"npm run build\" --verbose --initial",
     "prepare": "npm run build",
     "clean": "rimraf lib",
-    "build": "npm run clean && tsc && cp -r src/browser/. lib/browser/",
+    "build": "npm run clean && tsc && cp -r src/electron-main/. lib/electron-main/",
     "watch": "tsc -w"
   },
   "theiaExtensions": [
     {
-      "frontend": "lib/browser/nautical-ide-frontend-module",
+      "frontend": "lib/electron-main/nautical-ide-frontend-module",
       "electronMain": "lib/electron-main/nautical-electron-main-module"
     }
   ]

@@ -7,20 +7,29 @@
   "scripts": {
     "build:browser": "npm --prefix browser-app run bundle",
     "build:electron": "npm --prefix electron-app run bundle",
+    "clean": "rimraf lib",
+    "build": "npm run clean && tsc -p tsconfig.json && npm run copy-assets",
+    "copy-assets": "copyfiles -u 1 \"src/**/*.css\" \"src/**/*.svg\" lib",
     "prepare": "lerna run prepare",
     "postinstall": "theia check:theia-version",
     "start:browser": "npm --prefix browser-app start",
     "start:electron": "npm --prefix electron-app start",
     "watch:browser": "lerna run --parallel watch --ignore electron-app",
-    "watch:electron": "lerna run --parallel watch --ignore browser-app"
+    "watch:electron": "lerna run --parallel watch"
   },
   "devDependencies": {
+    "copyfiles": "^2.4.1",
     "lerna": "2.4.0",
+    "rimraf": "^6.0.1",
     "yargs": "^17.7.2"
   },
   "workspaces": [
     "nautical-ide",
     "browser-app",
     "electron-app"
-  ]
+  ],
+  "dependencies": {
+    "copyfiles": "^2.4.1",
+    "rimraf": "^6.1.3"
+  }
 }

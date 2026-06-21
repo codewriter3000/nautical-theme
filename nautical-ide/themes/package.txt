@@ -1,0 +1,1 @@
+"build": "npm run clean && tsc && cp -r src/electron-main/. lib/electron-main/",
